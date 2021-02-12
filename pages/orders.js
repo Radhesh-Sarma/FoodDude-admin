@@ -51,9 +51,8 @@ export default function orders({data}) {
 // This gets called on every request
 export async function getServerSideProps() {
     // Fetch data from external API
-    const res = await fetch(baseUrl + "api/orders/get")
+    const res = await fetch(baseUrl + "api/order/get")
     const data = await res.json()
-
     // Pass data to the page via props
     return { props: { data } }
 }
